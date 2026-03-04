@@ -152,6 +152,11 @@ raw_data/
 .env.local
 .env.*.local
 
+# API credentials
+*api_keys.json
+*api-keys.json
+polymarket_api_keys.json
+
 # Temporary files
 tmp/
 temp/

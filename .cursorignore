@@ -1,0 +1,15 @@
+﻿# Cursor index ignore - mirrors .gitignore + extras
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+data/
+models/
+*.pkl
+.env
+.env.*
+logs/
+*.db
+polysniff.db
+tmp/
+temp/

@@ -57,6 +57,11 @@ data = [
     "pyarrow>=14.0.0",
 ]
 
+trading = [
+    "eth-account>=0.9.0",
+    "py-clob-client>=0.1.0",
+]
+
 [tool.setuptools]
 packages = ["polysniff"]
 
