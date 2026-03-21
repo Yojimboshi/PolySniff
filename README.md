@@ -116,14 +116,13 @@ LOGGING_LEVEL=INFO
 
 ## Utility Scripts
 
-One-off scripts are located in `scripts/`.
+One-off scripts are located in `scripts/`. Heavy JSON from those scripts (e.g. categorized markets) is written under `data/` at the project root, not next to the scripts.
 
 Examples:
 
 ```bash
 python scripts/test_api.py
 python scripts/get_api_keys.py
-python scripts/test_model.py
 ```
 
 ## Project Layout

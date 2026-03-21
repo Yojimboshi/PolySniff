@@ -2,15 +2,25 @@
 
 Simple test scripts for API and modeling.
 
+**Market JSON** (categorized exports, samples, filtered outputs) lives in **`data/`** at the repo root, not in this folder. That directory is listed in `.gitignore` so large files stay local unless you force-add them.
+
 ## API Test
 
 ```bash
 python scripts/test_api.py
 ```
 
-Fetches latest 5 open markets from Polymarket API and prints summaries. Saves raw JSON to `scripts/markets_sample.json` for inspection.
+Fetches latest 5 open markets from Polymarket API and prints summaries. Large categorized output is written to `data/categorized_markets.json` (repo root; see `.gitignore`).
 
 **Purpose**: Understand Polymarket API response structure and available fields.
+
+## Filter top markets
+
+```bash
+python scripts/filter_markets.py
+```
+
+Defaults: read `data/categorized_markets.json`, write `data/filtered_marketData.json` (top 50 per category; optional `input.json output.json` and `-n N`).
 
 ## Get API Keys
 
@@ -32,16 +42,3 @@ Generates Polymarket API credentials (apiKey, secret, passphrase) via wallet sig
 **Security**: The script runs locally and only uses your private key to sign the challenge. Never share your private key or API credentials.
 
 **Purpose**: Generate API keys needed for authenticated trading endpoints on Polymarket.
-
-## Modeling Test
-
-```bash
-python scripts/test_model.py
-```
-
-Tests the full pipeline:
-1. Feature extraction from mock market data
-2. Probability engine prediction
-3. EV calculation
-
-**Purpose**: Verify the modeling pipeline works end-to-end with mock data.
